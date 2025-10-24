@@ -1,0 +1,28 @@
+[
+    {
+      "title": "Веб плеер на основе ООП",
+      "description": "4 задания с разными реализациями",
+      "path": "projects/OOP-web-Player/main.html"
+    },
+    {
+      "title": "WEB-Плеер",
+      "description": "Принцип работы веб-плеера",
+      "path": "projects/web-player/index.html"
+    },
+    {
+      "title": "Счёты",
+      "description": "Советские счёты на новый лад",
+      "path": "projects/calculator-on-bones-main/index.html"
+    },
+    {
+      "title": "Калькулятор",
+      "description": "Калькулятор стилизованный под IOS",
+      "path": "projects/IOSCalculator-main/index.html"
+    },
+    {
+      "title": "Анкета (лаба от 13.10.2025)",
+      "description": "Анкета с красивым .css и сохранением в локальную память",
+      "path": "projects/HTML-lab-13.10.2025-main"
+    }
+  ]
+  

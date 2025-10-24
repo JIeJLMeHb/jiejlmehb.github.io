@@ -1,0 +1,122 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: "Segoe UI", Roboto, Arial, sans-serif;
+    background: linear-gradient(135deg, #f0f4ff, #e6ecff);
+    color: #333;
+    line-height: 1.6;
+  }
+  
+  header {
+    background: linear-gradient(135deg, #6a11cb, #2575fc);
+    color: white;
+    text-align: center;
+    padding: 3rem 1rem;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  }
+  
+  header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  header p {
+    font-size: 1.2rem;
+    opacity: 0.9;
+  }
+  
+  header a {
+    display: inline-block;
+    margin-top: 1rem;
+    padding: 0.6rem 1.2rem;
+    background: white;
+    color: #2575fc;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: all 0.3s ease;
+  }
+  
+  header a:hover {
+    background: #f0f4ff;
+    transform: translateY(-2px);
+  }
+  
+  main {
+    max-width: 1100px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+  }
+  
+  main h2 {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    color: #444;
+  }
+  
+  .projects {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 1.5rem;
+  }
+  
+  .card {
+    background: white;
+    border-radius: 12px;
+    padding: 1.5rem;
+    text-align: center;
+    box-shadow: 0 6px 16px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-decoration: none;
+    color: inherit;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .card::before {
+    content: "";
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(37,117,252,0.15), transparent 70%);
+    transform: scale(0);
+    transition: transform 0.5s ease;
+  }
+  
+  .card:hover::before {
+    transform: scale(1);
+  }
+  
+  .card h3 {
+    font-size: 1.4rem;
+    margin-bottom: 0.5rem;
+    color: #2575fc;
+  }
+  
+  .card p {
+    font-size: 1rem;
+    color: #666;
+  }
+  
+  .card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 24px rgba(0,0,0,0.15);
+  }
+  
+  footer {
+    text-align: center;
+    padding: 1.5rem;
+    background: #f8f9ff;
+    color: #666;
+    font-size: 0.9rem;
+    margin-top: 3rem;
+    border-top: 1px solid #ddd;
+  }
+  
