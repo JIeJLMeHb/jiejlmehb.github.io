@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Анкета</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" type="image/jpg" href="assets/217988730.jpg" sizes="96x96" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<div id="block1" class="block visible">
+    <h2>Вход</h2>
+    
+    <div class="input-group">
+        <img src="assets/beer-svgrepo-com.svg" alt="User" class="input-icon">
+        <input type="text" id="username" placeholder="Username">
+    </div>
+    
+    <div class="input-group">
+        <img src="assets/lock-svgrepo-com.svg" alt="Password" class="input-icon">
+        <input type="password" id="password" placeholder="Password">
+    </div>
+    
+    <button onclick="login()">Войти</button>
+    
+    <div id="welcomeQuestion" style="display:none; margin-top:15px;">
+        <p id="welcomeText"></p>
+        <button onclick="restartSurvey(true)">Да</button>
+        <button onclick="restartSurvey(false)">Нет</button>
+    </div>
+</div>
+
+<div id="block2" class="block">
+  <h2>Анкета для <span id="userTitle"></span></h2>
+  <form id="surveyForm">
+    <fieldset class="contact-section">
+        <legend>Личная информация:</legend>
+        <label>1. Ваше имя: <input type="text" name="q1"></label>
+        <label>2. Ваш возраст: <input type="number" name="q2"></label>
+        <label>3. Пол:
+            <select name="q3">
+                <option value="">выбирайте с умом</option>
+                <option>Мужской (Пельмень)</option>
+                <option>Женский (не Пельмень)</option>
+            </select>
+        </label>
+        <label>4. Город проживания: <input type="text" name="q4"></label>
+        <label>5. Уровень образования:
+            <select name="q5">
+                <option value="">так какое?</option>
+                <option>Среднее</option>
+                <option>Среднее специальное</option>
+                <option>Высшее</option>
+                <option>Высшее Пельменное</option>
+                <option>Всевышнее</option>
+            </select>
+        </label>
+    </fieldset>
+    <fieldset class="info-section">
+        <legend>Ваши предпочтения</legend>
+        <label>6. Любимый цвет пельменя: <input type="text" name="q6"></label>
+        <form>
+            <p>7. Пельмени сварить или пожарить?</p>
+          
+            <div class="radio-group">
+              <label for="q7boil">Сварить</label>
+              <input type="radio" id="q7boil" name="q7fav_type" value="boil">
+            </div>
+          
+            <div class="radio-group">
+              <label for="q7fry">Пожарить</label>
+              <input type="radio" id="q7fry" name="q7fav_type" value="fry" checked>
+            </div>
+          </form>
+        <label>8. Напишите эссе о том насколько сильно вы любите пельмени:
+            <textarea name="q8"></textarea>
+        </label>
+        <label>9. Есть ли у вас в морозилке пельмени?
+            <select name="q9">
+                <option value="">отвечайте честно</option>
+                <option>Да (это замечательно)</option>
+                <option>Нет (Иди в магазин за пельменями)</option>
+            </select>
+        </label>
+        <label>10. Какой соус к пельменям вам нравится?
+            <input type="text" name="q10">
+        </label>
+    </fieldset>
+    <button type="button" onclick="submitSurvey()">Отправить</button>
+  </form>
+</div>
+
+<div id="block3" class="block">
+    <h2>Ответы пользователя <span id="userTitleResults"></span></h2>
+    <div id="results"></div>
+  
+    <div class="navigation-buttons">
+      <button onclick="showBlock('block1')">Вернуться к входу</button>
+    </div>
+  </div>  
+
+<div id="adminPanel" class="block">
+  <h2>Админ‑панель</h2>
+  <div id="adminUsers"></div>
+  <button onclick="clearDB()">Очистить всю базу</button>
+  <button onclick="showBlock('block1')">Назад к входу</button>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
