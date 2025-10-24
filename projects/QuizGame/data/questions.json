@@ -1,0 +1,13 @@
+[
+    {"text":"Какой язык используется для структурирования веб-страниц?","choices":["CSS","HTML","Python","SQL"],"correct":1},
+    {"text":"Какой тег в HTML отвечает за заголовок первого уровня?","choices":["<header>","<h1>","<title>","<head>"],"correct":1},
+    {"text":"Что такое CSS?","choices":["Язык программирования","Язык стилей","База данных","Сервер"],"correct":1},
+    {"text":"Какой оператор в JavaScript объявляет переменную с блочной областью?","choices":["var","let","global","dim"],"correct":1},
+    {"text":"Какая функция округляет число до ближайшего целого в JavaScript?","choices":["floor()","round()","ceil()","toFixed()"],"correct":1},
+    {"text":"Что означает HTTP?","choices":["HyperText Transfer Protocol","High Transfer Text Protocol","Hyperlink Text Transfer","HyperText Transfer Process"],"correct":0},
+    {"text":"HTML означает","choices":["HyperText Markup Language","Hyperlink Markup Language","Hyper Tool Markup Language","HyperText Machine Language"],"correct":0},
+    {"text":"Какая из этих структур данных работает по принципу LIFO?","choices":["Queue","Stack","Tree","Graph"],"correct":1},
+    {"text":"Какой метод массива создаёт новый массив, заполненный результатами вызова функции?","choices":["map","filter","forEach","reduce"],"correct":0},
+    {"text":"Какой оператор сравнения в JS проверяет строгое равенство?","choices":["=","==","===","?:="],"correct":2}
+  ]
+  

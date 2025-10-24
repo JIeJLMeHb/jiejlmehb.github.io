@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Quiz Game</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="app" class="container">
+
+    <!-- Стартовый блок -->
+    <section id="start-block" class="card visible panel">
+      <h1 class="logo">Quiz Game</h1>
+      <p class="lead">Проверь свои знания и займи место в таблице лидеров</p>
+      <input id="nickname" type="text" placeholder="Введите никнейм" maxlength="20" />
+      <div class="row" style="gap:10px;margin-top:12px;">
+        <button id="start-btn" class="btn primary">Начать игру</button>
+        <button id="manage-questions-btn" class="btn">Редактировать вопросы</button>
+        <button id="import-btn" class="btn ghost">Импорт из JSON</button>
+      </div>
+
+      <div class="leaderboard-preview">
+        <h3>Топ игроков</h3>
+        <ol id="leaderboard-list" class="leaderboard-list"></ol>
+      </div>
+    </section>
+
+    <!-- Блок вопросов -->
+    <section id="quiz-block" class="card panel">
+      <div class="quiz-header">
+        <div><strong>Игрок:</strong> <span id="player-name"></span></div>
+        <div><strong>Вопрос</strong> <span id="current-index">1</span>/<span id="total-count">10</span></div>
+        <div class="timer-wrap">
+          <div id="timer" class="timer">30</div>
+          <div class="timer-progress"><div id="timer-bar" class="timer-bar"></div></div>
+        </div>
+      </div>
+
+      <div id="question-area" class="question-area">
+        <h2 id="question-text">Вопрос появится здесь</h2>
+
+        <div id="answers" class="answers"></div>
+
+        <div class="meta-row">
+          <div class="time-bonus">Бонус за скорость: <span id="time-bonus">0</span></div>
+          <div class="score-display">Счёт: <span id="live-score">0</span></div>
+        </div>
+      </div>
+
+      <div class="controls">
+        <button id="next-btn" class="btn" hidden>Следующий вопрос</button>
+        <button id="quit-btn" class="btn ghost">Сдаться</button>
+      </div>
+    </section>
+
+    <!-- Блок результата -->
+    <section id="result-block" class="card panel">
+      <h2>Результат</h2>
+      <p class="result-text">Вы набрали <strong id="score"></strong> очков (правильных <strong id="correct-count">0</strong>)</p>
+      <div class="result-actions">
+        <button id="restart-btn" class="btn primary">Играть заново</button>
+        <button id="to-start-btn" class="btn">На старт</button>
+      </div>
+
+      <div class="leaderboard full">
+        <h3>Таблица лидеров</h3>
+        <table id="leaderboard-table">
+          <thead>
+            <tr><th>Место</th><th>Ник</th><th>Очки</th></tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- Панель редактирования вопросов -->
+    <section id="editor-block" class="card panel">
+      <h2>Редактор вопросов</h2>
+      <div class="editor-controls row">
+        <button id="add-q-btn" class="btn primary">Добавить вопрос</button>
+        <button id="reset-default-btn" class="btn ghost">Восстановить дефолт</button>
+        <button id="back-to-start-btn" class="btn">Назад</button>
+      </div>
+
+      <div id="editor-list" class="editor-list"></div>
+
+      <div class="editor-note">Изменения сохраняются в localStorage; импорт подгружает questions.json и добавляет их к набору.</div>
+    </section>
+
+  </div>
+
+  <script type="module" src="./js/app.js"></script>
+</body>
+</html>
