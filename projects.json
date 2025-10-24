@@ -20,9 +20,15 @@
       "path": "projects/IOSCalculator-main/index.html"
     },
     {
+      "title": "Викторина",
+      "description": "Web шоу кто хочет стать фронтендом",
+      "path": "projects/QuizGame/index.html"
+    },
+    {
       "title": "Анкета (лаба от 13.10.2025)",
       "description": "Анкета с красивым .css и сохранением в локальную память",
       "path": "projects/HTML-lab-13.10.2025-main"
     }
   ]
+
   
