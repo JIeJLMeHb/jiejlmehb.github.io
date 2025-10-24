@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Задание 3</title>
+    <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+    <h1>Задание 3</h1>
+    <nav><a href="main.html">На главную страницу:</a></nav>
+    <div class="players-container">
+        <section class="player-block">
+            <div class="track-list-view active">
+                <h2>Плейлист 1</h2>
+                <ul class="track-list"></ul>
+            </div>
+        <div class="player-view">
+            <button class="back-btn">← Назад</button>
+            <div class="player">
+                <img class="cover" src="" alt="Обложка"/>
+                <h2 class="track-title"></h2>
+                <p class="track-artist"></p>
+                <div class="controls">
+                    <button class="prev-btn">⏮</button>
+                    <button class="play-btn">▶</button>
+                    <button class="next-btn">⏭</button>
+                    <button class="random-btn">🎲</button>
+                </div>
+                <div class="progress">
+                    <span class="current-time">0:00</span>
+                    <input class="seek" type="range" min="0" max="100" value="0"/>
+                    <span class="duration">0:00</span>
+                </div>
+                <div class="volume">
+                    <input class="volume-range" type="range" min="0" max="1" step="0.01" value="1"/>
+                </div>
+                <audio class="audio"></audio>
+            </div>
+        </div>
+        </section>
+        <section class="player-block">
+            <div class="track-list-view active">
+                <h2>Плейлист 2</h2>
+                <ul class="track-list"></ul>
+            </div>
+            <div class="player-view">
+                <button class="back-btn">← Назад</button>
+                <div class="player">
+                    <img class="cover" src="" alt="Обложка"/>
+                    <h2 class="track-title"></h2>
+                    <p class="track-artist"></p>
+                    <div class="controls">
+                        <button class="prev-btn">⏮</button>
+                        <button class="play-btn">▶</button>
+                        <button class="next-btn">⏭</button>
+                        <button class="random-btn">🎲</button>
+                    </div>
+                    <div class="progress">
+                        <span class="current-time">0:00</span>
+                        <input class="seek" type="range" min="0" max="100" value="0"/>
+                        <span class="duration">0:00</span>
+                    </div>
+                    <div class="volume">
+                        <input class="volume-range" type="range" min="0" max="1" step="0.01" value="1"/>
+                    </div>
+                    <audio class="audio"></audio>
+                </div>
+            </div>
+        </section>
+    </div>
+    <script src="player3_two.js" defer></script>
+</body>
+</html>
